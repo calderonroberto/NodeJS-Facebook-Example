@@ -17,16 +17,21 @@ module.exports = {
 		res.redirect('/');
 	},
 
-	facebook: function(req, res){
-		req.logIn(user, function(err){
-			if (err) {
-				console.log(err);
-				res.view('500');
-				return;
-			}
-			res.redirect('/');
-			return;
-		})(req, res);
-	}
+	// https://developers.facebook.com/docs/
+  // https://developers.facebook.com/docs/reference/login/
+  facebook: function(req, res) {
+    passport.authenticate('facebook', { failureRedirect: '/login', scope: ['email'] }, function(err, user) {
+      req.logIn(user, function(err) {
+        if (err) {
+          console.log(err);
+          res.view('500');
+          return;
+        }
+
+        res.redirect('/');
+        return;
+      });
+    })(req, res);
+  },
 
 };
