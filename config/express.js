@@ -1,4 +1,4 @@
-var passport = require('passport')
+var passport = require('passport'),
     FacebookStrategy = require('passport-facebook').Strategy
     //Other strategies
 ;
