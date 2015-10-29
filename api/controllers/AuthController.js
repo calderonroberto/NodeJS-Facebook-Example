@@ -28,7 +28,7 @@ module.exports = {
           return;
         }
 
-        res.redirect('/');
+        res.redirect('/home');
         return;
       });
     })(req, res);
