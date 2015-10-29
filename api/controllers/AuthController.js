@@ -13,9 +13,10 @@ module.exports = {
 		res.view();
 	},
 
-	logout: function (req, res) {
-		res.redirect('/');
-	},
+	logout: function(req, res) {
+    req.logout();
+    res.redirect('/home');
+  },
 
 	// https://developers.facebook.com/docs/
   // https://developers.facebook.com/docs/reference/login/

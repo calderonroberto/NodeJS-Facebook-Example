@@ -32,6 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  //TODO: change to homepage controller
   '/': {
     view: 'homepage'
   },
@@ -51,7 +52,7 @@ module.exports.routes = {
     action: 'login'
   },
 
-  'logout': {
+  '/logout': {
     controller: 'AuthController',
     action: 'logout'
   }
