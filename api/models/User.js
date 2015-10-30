@@ -7,7 +7,7 @@
 
 module.exports = {
 
-  adapter: 'mongo',
+  connection: 'mongo',
 
   attributes: {
     provider: 'STRING',
