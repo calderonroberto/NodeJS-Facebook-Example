@@ -55,6 +55,12 @@ module.exports.routes = {
   '/logout': {
     controller: 'AuthController',
     action: 'logout'
+  },
+
+  '/home': {
+    controller: 'HomeController',
+    action: 'index'
   }
+
 
 };
